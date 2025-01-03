@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lindamcbride.nft</title>
+  <link rel="stylesheet" href="./style.css" data-no-cache="false"/>
+    <link rel="icon" href="./favicon.svg" data-no-cache="false"/>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Add more images to the array as needed */
+    .background.bg-1 {
+      background-image: url("./img/intro/1.webp");
+    }
+
+    .background.bg-2 {
+      background-image: url("./img/intro/2.webp");
+    }
+
+    .background.bg-3 {
+      background-image: url("./img/intro/3.webp");
+    }
+    
+    .background.bg-5 {
+      background-image: url("./img/intro/5.webp");
+    }
+ /* Add mobile background image classes */
+ @media (max-width: 768px) {
+    .background.bg-m1 {
+      background-image: url("./img/intro/m1.webp");
+    }
+
+    .background.bg-m2 {
+      background-image: url("./img/intro/m2.webp");
+    }
+
+    .background.bg-m3 {
+      background-image: url("./img/intro/m3.webp");
+    }
+
+    .background.bg-m5 {
+      background-image: url("./img/intro/m5.webp");
+    }
+  }
+    
+    .top-left-image {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+    /* ... and so on for more images ... */
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const backgrounds = document.querySelector(".background");
+  const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
+  const imageClasses = isMobile ? ["bg-m1", "bg-m2", "bg-m3", "bg-m5"] : ["bg-1", "bg-2", "bg-3", "bg-5"];
+  const randomIndex = Math.floor(Math.random() * imageClasses.length);
+  backgrounds.classList.add(imageClasses[randomIndex]);
+});
+
+  </script>
+</head>
+<body>
+  <div class="background"></div>
+  <a href="./p/p4.html"> <img src="./img/intro.svg" alt="Enter" class="top-left-image" data-no-cache="false"></a>
+</body>
+</html>

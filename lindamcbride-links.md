@@ -1,0 +1,4 @@
+lindamcbride.nft
+https://cloudflare-ipfs.com/ipns/k51qzi5uqu5djyk7vdyff8spsvwmgkq09zx64guu6bot65xeihdag8frtsr07y/
+https://cloudflare-ipfs.com/ipfs/QmcxL2tcx5PhGX81Cja4CXeekhArTgemnCJgyP47ZNbwPk/
+ipfs://QmcxL2tcx5PhGX81Cja4CXeekhArTgemnCJgyP47ZNbwPk/

@@ -1,0 +1,94 @@
+body {
+    background-color: rgba(88, 62, 99, 0.925);
+    
+}
+
+.container-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    /* This centers the container vertically in the viewport. You can adjust the height as needed. */
+    overflow: hidden;
+    /* Hide any overflow if the image is larger than the container. */
+    padding-left: 4em;
+    
+   }
+
+.full-screen-width {
+    max-width: 100%;
+    max-height: 100%;
+    /* Limit the image height to 100% of the viewport height. */
+    width: auto;
+    /* Allow the width to adjust while maintaining the aspect ratio. */
+    height: auto;
+    /* Allow the height to adjust while maintaining the aspect ratio. */
+    border-radius: 15px;
+}
+
+
+
+.arrow-container {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 120px;
+    /* Increased width for better clickability */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow {
+    font-size: 34px;
+    padding-right: .6em;
+
+}
+
+.logo {
+    position: absolute;
+    margin-top: 1.3em;
+    margin-left: 1.33em;
+}
+
+.logo img {
+    width: 40px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Normal state */
+a.my-link {
+    color: rgb(185, 85, 85);
+    text-decoration: none;
+}
+
+/* Hover state */
+a.my-link:hover {
+    color: rgb(241, 102, 253);
+
+    text-decoration: none;
+}
+
+/* Visited state */
+a.my-link:visited {
+    color: rgb(251, 255, 31);
+
+}
+
+/* Active state (when clicked) */
+a.my-link:active {
+    color: rgb(138, 72, 10);
+
+}
+
+
+  
+  
+  
+  
+  
+  

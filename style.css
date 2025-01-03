@@ -1,0 +1,371 @@
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
+  padding-top: 2px;
+  padding-bottom: 50px;
+}
+
+body {
+  background-color: rgba(88, 62, 99, 0.925);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  margin: 5;
+  
+}
+p{
+  font-size: .8em;
+}
+p.bio{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  margin: 5;
+  padding-bottom: 1em;
+}
+/* menu*/
+.menu{
+  text-align:right; 
+  padding-top:50px;
+}
+li{
+  padding-right:40px;
+  display:inline;
+  color: antiquewhite;
+  
+}
+a{
+font-size: 1em;
+font-weight: 300;
+  color:rgb(225, 171, 250);
+  
+  text-decoration:none;
+}
+a:hover{
+  border-top:0px solid #b9a1fc;
+  color:#fbf6ff;
+}
+/* variables */
+.gallery {
+  --gap: 1rem;
+  --min-height: 20rem;
+  --image-background: hsla(0, 0%, 86%, 0.2);
+  --last-background: none;
+  --radius: .5rem;
+  
+  
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: var(--gap);
+  margin: 2.75rem;
+  pointer-events: none;
+  
+  
+}
+.gallery:hover > article {
+  opacity: 0.9;
+}
+.gallery > article {
+  flex-grow: calc(var(--width) * (100000 / var(--height)));
+  flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
+  aspect-ratio: var(--width)/var(--height);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--image-background);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.14), 0 0 0.125rem rgba(0, 0, 0, 0.12);
+  pointer-events: auto;
+  transition: opacity 500ms linear;
+}
+.gallery > article img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.gallery > article picture + details {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-shadow: 0 0 2px #000;
+  padding: 1em;
+  text-align: left;
+  transition: opacity 250ms linear;
+  z-index: 2;
+ 
+}
+.gallery > article picture + details > summary {
+  pointer-events: none;
+  border: none;
+  list-style: none;
+}
+.gallery > article::after {
+  content: " ";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0% 80%, rgba(0, 0, 0, 0.301961) 98% 100%);
+  pointer-events: none;
+  transition: opacity 250ms linear;
+  z-index: 1;
+}
+.gallery > article:hover {
+  opacity: 1;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.14) ;
+}
+.gallery > article:hover::after {
+  opacity: 1;
+}
+.gallery > article:hover picture + details {
+  opacity: 1;
+}
+.gallery:after {
+  content: " ";
+  flex-grow: 1000000000;
+  background: var(--last-background);
+}
+/* Pagination */
+/*
+A lot of this is just visual styling. The important thing to observe here is how :checked is being used to manipulate the visibility of the dropdown menu.
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+}
+
+.obfuscated {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+p.gallery{
+  font-style: italic;
+  font-size: .7em;
+  color: rgb(225, 171, 250);
+}
+
+/* Arrows */
+.content-container {
+  text-align: center;
+  
+  padding: 20px;
+}
+
+.next-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5em;
+}
+
+.arrow-left,
+.arrow-right {
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  cursor: pointer;
+}
+
+.arrow-left {
+  border-right: 50px solid #c0abd1;
+  margin-right: 15px;
+}
+
+.arrow-right {
+  border-left: 50px solid #c0abd1;
+  margin-left: 15px;
+}
+
+
+
+/* Layout and style */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.centerl {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  margin-top: 3em;
+  border-radius: 15px;
+  box-shadow: 25px 25px 65px 0px rgba(203, 200, 206, 0.925);
+}
+.centerp {
+  display: block;
+  margin: 0 auto;
+  width: 532px;
+  padding-top: 13em;
+}
+
+/* image shadowbox */
+img.list {
+ width: 170px;
+}
+.centered {
+  position: absolute;
+  text-align: center;
+  margin-top: -2em;
+  padding: 20px;
+  padding-bottom: 12em;
+  
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(77, 21, 94, 0.582);
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  opacity: 0;
+  pointer-events: none; /* Allows hovering over the text without interference */
+  transition: opacity 0.2s ease;
+}
+
+.image-container:hover .hover-text {
+  opacity: 1;
+}
+/* motto */
+.center-container {
+  text-align: center;
+}
+
+.center-content {
+  
+  padding: 20px;
+  border-radius: 8px;
+ margin-top: 20px; /* Add margin to the top of the content */
+}
+h3{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1em;
+  color: rgb(236, 219, 243); 
+ padding: 2em;
+}
+h2{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: rgb(236, 219, 243); 
+ margin-top: 1em;
+}
+p.arrow {
+  font-size: 1.5em;   
+  margin-left: 50%; 
+  margin-top: -.5em; 
+  padding-bottom: 2em;
+ }
+ /*Pagination*/
+ .pagination {
+  display: inline-block;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.pagination a {
+  color: #a174be;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #00ffff83;
+  margin: 0 3px;
+}
+
+.pagination a.active {
+  background-color: #b3b3b3;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #d2d7d3;
+}
+/* Bio */
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  
+}
+
+.custom-container {
+  width: 600px; /* Set the width to 600px */
+  margin-top: 40px;
+  padding: 1px;
+  color: rgb(236, 219, 243);
+}
+.signature-container {
+  margin-top: -400px;
+  text-align: center;
+  margin-right: 12em;
+}
+
+.signature-image {
+  width: 200px;
+  height: auto;
+}
+/*powered by */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+
+.footer {
+  
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.new-logo {
+  margin-left: 10px;
+  width: 30px;
+  height: auto;
+}
+
+
+
+
+
